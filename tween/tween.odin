@@ -41,6 +41,10 @@ new_callback :: proc(
 }
 
 update :: proc(tw: ^Tween($T), delta: time.Duration, ptr: ^T) {
+        if tw == nil || tw^ == {} {
+                return
+        }
+
 	tw.elapsed += delta
 
 	elapsed_clamped := min(tw.elapsed, tw.dur)

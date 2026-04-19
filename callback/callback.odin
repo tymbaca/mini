@@ -15,6 +15,10 @@ new :: proc(dur: time.Duration, callback: proc(userdata: $T)) -> Callback(T) {
 }
 
 update :: proc(cb: ^Callback($T), delta: time.Duration, userdata: T) {
+        if cb == nil || cb^ == {} {
+                return
+        }
+
 	cb.elapsed += delta
 
 	if cb.done {
