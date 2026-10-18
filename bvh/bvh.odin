@@ -13,7 +13,7 @@ Node :: struct($V, $B: typeid) {
 }
 
 Collision :: struct($V, $B: typeid) {
-        a, b: ^Node(V, B)
+        a, b: ^Node(V, B),
 }
 
 // check_collisions – self‑collision detection inside one BVH

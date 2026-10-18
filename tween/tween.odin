@@ -1,11 +1,7 @@
 #+vet explicit-allocators
 package tween
 
-import "core:log"
-import "core:strings"
-import "base:runtime"
 import "core:math/ease"
-import "core:math/linalg"
 import "core:time"
 
 Tween :: struct($T: typeid) {
