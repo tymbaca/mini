@@ -1,7 +1,6 @@
 #+vet explicit-allocators
 package volume3d
 
-import "core:math/ease"
 import "core:math"
 import "core:math/linalg"
 import rl "vendor:raylib"
